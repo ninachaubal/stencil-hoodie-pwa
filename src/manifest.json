@@ -1,6 +1,6 @@
 {
-  "name": "Ionic PWA Toolkit",
-  "short_name": "Ionic PWA",
+  "name": "Stencil Hoodie PWA Starter",
+  "short_name": "PWA Starter",
   "start_url": "/",
   "display": "standalone",
   "icons": [{

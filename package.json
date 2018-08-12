@@ -1,25 +1,33 @@
 {
-  "name": "@ionic/pwa-toolkit",
+  "name": "stencil-hoodie-pwa",
   "private": true,
   "version": "0.0.1",
-  "description": "Ionic PWA Toolkit",
+  "description": "PWA starter with Stencil & Hoodie",
   "files": [
     "dist/"
   ],
   "scripts": {
-    "build": "stencil build",
-    "start": "stencil build --dev --watch --serve",
-    "start.sw": "npm run start --service-worker",
+    "prestart": "stencil build",
+    "start": "hoodie",
+    "watch": "stencil build --dev --watch",
+    "dev": "run-p watch start",
     "test": "jest",
     "test.watch": "jest --watch"
   },
+  "hoodie": {
+    "public": "www"
+  },
   "dependencies": {
+    "@hoodie/client": "^10.1.1",
     "@ionic/core": "4.0.0-beta.2",
-    "@stencil/core": "0.11.3"
+    "@stencil/core": "0.11.3",
+    "hoodie": "^28.2.6",
+    "pouchdb-browser": "^7.0.0"
   },
   "devDependencies": {
     "@types/jest": "^22.2.2",
-    "jest": "^22.4.3"
+    "jest": "^22.4.3",
+    "yarn-run-all": "^3.1.1"
   },
   "repository": {
     "type": "git",
